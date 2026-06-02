@@ -1,0 +1,188 @@
+{
+    "info": {
+        "name": "Student Management API",
+        "_postman_id": "12345678-abcd-1234-abcd-1234567890ab",
+        "description": "CRUD operations for Student Management API using FastAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Home",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add Student",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"id\": 1,\n  \"name\": \"Gopika\",\n  \"email\": \"gopika@gmail.com\",\n  \"course\": \"Python\"\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/students",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "students"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Students",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/students",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "students"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Student By ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Student (PUT)",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"id\": 1,\n  \"name\": \"Shalu\",\n  \"email\": \"shalu@gmail.com\",\n  \"course\": \"FastAPI\"\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Student (PATCH)",
+            "request": {
+                "method": "PATCH",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Shalu Updated\"\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Student",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
